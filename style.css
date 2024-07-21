@@ -1,0 +1,116 @@
+/* шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*обнуление отступов и границ*/
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border: 1px solid #000;
+}
+
+/* уведомление */
+#notification{
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transform: translateX(-150%);
+    animation: show 1s forwards;
+}
+@keyframes show {
+    0% {transform: translateX(150%);}
+    100% {transform: translateY(0);}
+} 
+
+.message{
+    display: flex;
+    padding: 10px;
+}
+
+/* прогресс-бар */
+#progress {
+    width: 100%;
+    height: 6px;
+    background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+#bar {
+    width: 1%;
+    height: 100%;
+    background-color: rgba(75, 78, 81, 1);
+}
+
+.content {
+    margin: 0px 0px 0px 15px;
+    padding: 0px;
+    width: 280px;
+}
+
+/* иконка */
+#status{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
+/* заголовок */
+#label{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+
+/* текст */
+#text{
+    font-weight: lighter;
+    text-align: left;
+    color: rgba(123, 124, 125, 1);
+}
+
+
+/* кнопка */
+button{
+    border-radius: 5px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin: 20px 20px;
+    cursor: pointer;
+    background-color: #008CBA;
+    padding: 20px;
+}
+button:hover {
+    border: 2px solid #008CBA;
+    background-color: #fff;
+    color: #008CBA;
+}
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
